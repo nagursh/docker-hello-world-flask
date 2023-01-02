@@ -37,3 +37,10 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+
+    - task: AzureWebAppContainer@1
+      inputs:
+        azureSubscription: 'Pay-As-You-Go(c7f3f81a-932b-430a-8dc7-10eb38aeef06)'
+        appName: 'testdockerwebapp1'
+        containers: 'demoreactacr.azurecr.io/nagurshdockerhelloworldflask:$(Build.BuildId)'
+
