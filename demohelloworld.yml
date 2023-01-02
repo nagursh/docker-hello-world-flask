@@ -43,4 +43,4 @@ stages:
       inputs:
         azureSubscription: 'Pay-As-You-Go(c7f3f81a-932b-430a-8dc7-10eb38aeef06)'
         appName: 'demohelloapp'
-        containers: 'demoreactacr.azurecr.io/image-$(Build.Repository.Name):$(Build.BuildId)'
+        containers: 'demoreactacr.azurecr.io/$(Build.Repository.Name):$(Build.BuildId)'
