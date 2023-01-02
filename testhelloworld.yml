@@ -42,5 +42,8 @@ stages:
       inputs:
         azureSubscription: 'Pay-As-You-Go(c7f3f81a-932b-430a-8dc7-10eb38aeef06)'
         appName: 'testdockerwebapp1'
+        deployToSlotOrASE: true
+        resourceGroupName: 'rg-demo'
+        slotName: 'production'
         containers: 'demoreactacr.azurecr.io/image-$(Build.RepositoryName):$(Build.BuildId)'
 
